@@ -27,10 +27,10 @@ module blinky(
     output led0_r
     );
     
-reg [24:0] count = 0;
-assign led0_b = count[24];
-assign led0_g = count[16];
-assign led0_r = count[8];
+reg [27:0] count = 0;
+assign led0_b = count[27];
+assign led0_g = count[26];
+assign led0_r = count[25];
 always @ (posedge(CLK100MHZ)) count <= count + 1;
 
 endmodule
